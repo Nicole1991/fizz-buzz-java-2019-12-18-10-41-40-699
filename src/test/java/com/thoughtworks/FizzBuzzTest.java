@@ -20,4 +20,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.convertNumber(inputNumber);
         assertEquals("Fizz", output);
     }
+
+    @Test
+    public void should_return_buzz_when_given_number_is_5() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 10;
+        String output = fizzBuzz.convertNumber(inputNumber);
+        assertEquals("Buzz", output);
+    }
 }
