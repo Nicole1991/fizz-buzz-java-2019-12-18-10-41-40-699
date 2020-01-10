@@ -6,6 +6,8 @@ class FizzBuzz {
             return "Fizz";
         } else if (inputNumber % 5 == 0) {
             return "Buzz";
+        } else if (inputNumber % 7 == 0) {
+            return "Whizz";
         }
         return String.valueOf(inputNumber);
     }
