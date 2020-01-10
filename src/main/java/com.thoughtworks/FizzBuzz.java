@@ -3,10 +3,7 @@ package com.thoughtworks;
 class FizzBuzz {
     public String convertNumber(int inputNumber) {
         String result = "";
-        if (!numberIsTimesOf3(inputNumber) && !numberIsTimesOf5(inputNumber) && !numberIsTimesOf7(inputNumber)) {
-            return String.valueOf(inputNumber);
-        }
-        if (numberIsTimesOf3(inputNumber)) {
+        if (numberIsTimesOf3(inputNumber) || inputNumberContainsGivenNumber(inputNumber, 3)) {
             result = result + "Fizz";
         }
         if (numberIsTimesOf5(inputNumber)) {
@@ -14,6 +11,10 @@ class FizzBuzz {
         }
         if (numberIsTimesOf7(inputNumber)) {
             result = result + "Whizz";
+        }
+        if (!numberIsTimesOf3(inputNumber) && !numberIsTimesOf5(inputNumber) && !numberIsTimesOf7(inputNumber)
+            && !inputNumberContainsGivenNumber(inputNumber, 3)) {
+            return String.valueOf(inputNumber);
         }
         return result;
     }
@@ -32,5 +33,9 @@ class FizzBuzz {
 
     private boolean inputNumberIsTimesOfGivenNumber(int inputNumber, int givenNumber) {
         return inputNumber % givenNumber == 0;
+    }
+
+    private boolean inputNumberContainsGivenNumber(int inputNumber, int givenNumber) {
+        return String.valueOf(inputNumber).contains(String.valueOf(givenNumber));
     }
 }
