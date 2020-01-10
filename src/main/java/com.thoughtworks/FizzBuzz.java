@@ -1,24 +1,29 @@
 package com.thoughtworks;
 
 class FizzBuzz {
+
+    public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
+    public static final String WHIZZ = "Whizz";
+
     public String convertNumber(int inputNumber) {
         String result = "";
         if (inputNumberContainsGivenNumber(inputNumber, 7)) {
             if (numberIsTimesOf3(inputNumber)) {
-                result += "Fizz";
+                result += FIZZ;
             }
             if (numberIsTimesOf7(inputNumber)) {
-                result += "Whizz";
+                result += WHIZZ;
             }
         } else if (inputNumberContainsGivenNumber(inputNumber, 5)) {
             result = getOutputForNumberIsTimesOf5And7(inputNumber, result);
             return result;
         } else {
             if (inputNumberContainsGivenNumber(inputNumber, 3)) {
-                return "Fizz";
+                return FIZZ;
             }
             if (numberIsTimesOf3(inputNumber)) {
-                result += "Fizz";
+                result += FIZZ;
             }
             result = getOutputForNumberIsTimesOf5And7(inputNumber, result);
             if (!numberIsTimesOf3(inputNumber) && !numberIsTimesOf5(inputNumber) && !numberIsTimesOf7(inputNumber)) {
@@ -30,10 +35,10 @@ class FizzBuzz {
 
     private String getOutputForNumberIsTimesOf5And7(int inputNumber, String result) {
         if (numberIsTimesOf5(inputNumber)) {
-            result += "Buzz";
+            result += BUZZ;
         }
         if (numberIsTimesOf7(inputNumber)) {
-            result += "Whizz";
+            result += WHIZZ;
         }
         return result;
     }
