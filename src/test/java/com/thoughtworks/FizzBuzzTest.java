@@ -10,6 +10,14 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         int inputNumber = 3;
         String output = fizzBuzz.convertNumber(inputNumber);
-        assertEquals("fizz", output);
+        assertEquals("Fizz", output);
+    }
+
+    @Test
+    public void should_return_fizz_when_given_number_is_6() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 6;
+        String output = fizzBuzz.convertNumber(inputNumber);
+        assertEquals("Fizz", output);
     }
 }
