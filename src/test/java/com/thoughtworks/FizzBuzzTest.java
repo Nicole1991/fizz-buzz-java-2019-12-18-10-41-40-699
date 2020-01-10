@@ -36,4 +36,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.convertNumber(inputNumber);
         assertEquals("FizzBuzz", output);
     }
+
+    @Test
+    public void should_return_number_when_given_number_is_not_times_of_3_or_5_or_7_like_4() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 4;
+        String output = fizzBuzz.convertNumber(inputNumber);
+        assertEquals("4", output);
+    }
 }
