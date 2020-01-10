@@ -3,6 +3,9 @@ package com.thoughtworks;
 class FizzBuzz {
     public String convertNumber(int inputNumber) {
         String result = "";
+        if (!numberIsTimesOf3(inputNumber) && !numberIsTimesOf5(inputNumber) && !numberIsTimesOf7(inputNumber)) {
+            return String.valueOf(inputNumber);
+        }
         if (numberIsTimesOf3(inputNumber)) {
             result = result + "Fizz";
         }
