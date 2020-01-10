@@ -2,14 +2,17 @@ package com.thoughtworks;
 
 class FizzBuzz {
     public String convertNumber(int inputNumber) {
+        String result = "";
         if (numberIsTimesOf3(inputNumber)) {
-            return "Fizz";
-        } else if (numberIsTimesOf5(inputNumber)) {
-            return "Buzz";
-        } else if (numberIsTimesOf7(inputNumber)) {
-            return "Whizz";
+            result = result + "Fizz";
         }
-        return String.valueOf(inputNumber);
+        if (numberIsTimesOf5(inputNumber)) {
+            result = result +"Buzz";
+        }
+        if (numberIsTimesOf7(inputNumber)) {
+            result = result + "Whizz";
+        }
+        return result;
     }
 
     private boolean numberIsTimesOf7(int inputNumber) {
