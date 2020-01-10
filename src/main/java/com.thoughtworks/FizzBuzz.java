@@ -4,12 +4,7 @@ class FizzBuzz {
     public String convertNumber(int inputNumber) {
         String result = "";
         if (inputNumberContainsGivenNumber(inputNumber, 5)) {
-            if (numberIsTimesOf5(inputNumber)) {
-                result += "Buzz";
-            }
-            if (numberIsTimesOf7(inputNumber)) {
-                result += "Whizz";
-            }
+            result = getOutputForNumberIsTimesOf5And7(inputNumber, result);
             return result;
         } else {
             if (inputNumberContainsGivenNumber(inputNumber, 3)) {
@@ -18,15 +13,20 @@ class FizzBuzz {
             if (numberIsTimesOf3(inputNumber)) {
                 result += "Fizz";
             }
-            if (numberIsTimesOf5(inputNumber)) {
-                result += "Buzz";
-            }
-            if (numberIsTimesOf7(inputNumber)) {
-                result += "Whizz";
-            }
+            result = getOutputForNumberIsTimesOf5And7(inputNumber, result);
             if (!numberIsTimesOf3(inputNumber) && !numberIsTimesOf5(inputNumber) && !numberIsTimesOf7(inputNumber)) {
                 return String.valueOf(inputNumber);
             }
+        }
+        return result;
+    }
+
+    private String getOutputForNumberIsTimesOf5And7(int inputNumber, String result) {
+        if (numberIsTimesOf5(inputNumber)) {
+            result += "Buzz";
+        }
+        if (numberIsTimesOf7(inputNumber)) {
+            result += "Whizz";
         }
         return result;
     }
