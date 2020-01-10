@@ -28,4 +28,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.convertNumber(inputNumber);
         assertEquals("Whizz", output);
     }
+
+    @Test
+    public void should_return_fizzbuzz_when_given_number_is_times_of_3_and_5_like_15() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 15;
+        String output = fizzBuzz.convertNumber(inputNumber);
+        assertEquals("FizzBuzz", output);
+    }
 }
