@@ -52,4 +52,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.convertNumber(inputNumber);
         assertEquals("Fizz", output);
     }
+
+    @Test
+    public void should_return_fizz_when_given_number_is_contains_3_and_times_of_5_or_7_like_30() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 30;
+        String output = fizzBuzz.convertNumber(inputNumber);
+        assertEquals("Fizz", output);
+    }
 }
