@@ -3,7 +3,14 @@ package com.thoughtworks;
 class FizzBuzz {
     public String convertNumber(int inputNumber) {
         String result = "";
-        if (inputNumberContainsGivenNumber(inputNumber, 5)) {
+        if (inputNumberContainsGivenNumber(inputNumber, 7)) {
+            if (numberIsTimesOf3(inputNumber)) {
+                result += "Fizz";
+            }
+            if (numberIsTimesOf7(inputNumber)) {
+                result += "Whizz";
+            }
+        } else if (inputNumberContainsGivenNumber(inputNumber, 5)) {
             result = getOutputForNumberIsTimesOf5And7(inputNumber, result);
             return result;
         } else {
