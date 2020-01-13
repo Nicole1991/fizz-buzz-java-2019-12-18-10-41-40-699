@@ -5,6 +5,9 @@ class FizzBuzz {
     public static final String FIZZ = "Fizz";
 
     public String fizzBuzz(int inputNumber) {
-        return FIZZ;
+        if (inputNumber % 3 == 0) {
+            return FIZZ;
+        }
+        return String.valueOf(inputNumber);
     }
 }

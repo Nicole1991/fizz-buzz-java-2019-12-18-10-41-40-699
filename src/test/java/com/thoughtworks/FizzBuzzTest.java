@@ -12,4 +12,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.fizzBuzz(inputNumber);
         assertEquals("Fizz", output);
     }
+
+    @Test
+    public void should_return_number_when_given_number_is_not_times_of_3_like_2() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 2;
+        String output = fizzBuzz.fizzBuzz(inputNumber);
+        assertEquals("2", output);
+    }
 }
