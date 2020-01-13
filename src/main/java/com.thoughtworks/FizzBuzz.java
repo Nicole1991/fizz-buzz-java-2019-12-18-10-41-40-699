@@ -3,12 +3,13 @@ package com.thoughtworks;
 class FizzBuzz {
 
     public String fizzBuzz(int inputNumber) {
+        StringBuilder result = new StringBuilder();
         for (SpecialNumberEnum specialNumberEnum: SpecialNumberEnum.values()) {
-            if (inputNumber % specialNumberEnum.getSpecialNumber() == 0) {
-                return specialNumberEnum.getTransferString();
+            if (isTimesOfGivenNumber(inputNumber, specialNumberEnum.getSpecialNumber())) {
+                result.append(specialNumberEnum.getTransferString());
             }
         }
-        return String.valueOf(inputNumber);
+        return result.length() == 0 ? String.valueOf(inputNumber) : result.toString();
     }
 
     private boolean isTimesOfGivenNumber(int inputNumber, int givenNumber) {

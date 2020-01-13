@@ -36,4 +36,20 @@ public class FizzBuzzTest {
         String output = fizzBuzz.fizzBuzz(inputNumber);
         assertEquals("Whizz", output);
     }
+
+    @Test
+    public void should_return_FizzBuzz_when_given_number_is_times_of_3_and_times_of_5_like_15() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 15;
+        String output = fizzBuzz.fizzBuzz(inputNumber);
+        assertEquals("FizzBuzz", output);
+    }
+
+    @Test
+    public void should_return_FizzWhizz_when_given_number_is_times_of_3_and_times_of_7_like_21() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 21;
+        String output = fizzBuzz.fizzBuzz(inputNumber);
+        assertEquals("FizzWhizz", output);
+    }
 }
