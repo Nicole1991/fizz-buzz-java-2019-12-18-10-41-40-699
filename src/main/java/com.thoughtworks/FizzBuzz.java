@@ -1,10 +1,15 @@
 package com.thoughtworks;
 
+import static com.thoughtworks.SpecialNumberEnum.FIZZ;
+
 class FizzBuzz {
 
-    public String fizzBuzz(int inputNumber) {
+    String fizzBuzz(int inputNumber) {
         StringBuilder result = new StringBuilder();
         for (SpecialNumberEnum specialNumberEnum: SpecialNumberEnum.values()) {
+            if (String.valueOf(inputNumber).contains("3")) {
+                return FIZZ.getTransferString();
+            }
             if (isTimesOfGivenNumber(inputNumber, specialNumberEnum.getSpecialNumber())) {
                 result.append(specialNumberEnum.getTransferString());
             }

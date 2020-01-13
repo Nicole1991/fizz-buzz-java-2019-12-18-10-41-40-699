@@ -1,6 +1,6 @@
 package com.thoughtworks;
 
-public enum  SpecialNumberEnum {
+public enum SpecialNumberEnum {
     FIZZ(3, "Fizz"),
     BUZZ(5, "Buzz"),
     WHIZZ(7, "Whizz"),;

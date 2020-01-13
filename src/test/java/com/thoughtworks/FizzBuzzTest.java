@@ -52,4 +52,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.fizzBuzz(inputNumber);
         assertEquals("FizzWhizz", output);
     }
+
+    @Test
+    public void should_return_Fizz_when_given_number_contains_3_like_13() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 13;
+        String output = fizzBuzz.fizzBuzz(inputNumber);
+        assertEquals("Fizz", output);
+    }
 }
