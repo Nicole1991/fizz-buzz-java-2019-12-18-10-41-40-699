@@ -2,17 +2,11 @@ package com.thoughtworks;
 
 class FizzBuzz {
 
-    public static final String FIZZ = "Fizz";
-    private static final String BUZZ = "Buzz";
-    private static final String WHIZZ = "Whizz";
-
     public String fizzBuzz(int inputNumber) {
-        if (isTimesOfGivenNumber(inputNumber, 3)) {
-            return FIZZ;
-        } else if (isTimesOfGivenNumber(inputNumber, 5)) {
-            return BUZZ;
-        } else if (isTimesOfGivenNumber(inputNumber, 7)) {
-            return WHIZZ;
+        for (SpecialNumberEnum specialNumberEnum: SpecialNumberEnum.values()) {
+            if (inputNumber % specialNumberEnum.getSpecialNumber() == 0) {
+                return specialNumberEnum.getTransferString();
+            }
         }
         return String.valueOf(inputNumber);
     }
