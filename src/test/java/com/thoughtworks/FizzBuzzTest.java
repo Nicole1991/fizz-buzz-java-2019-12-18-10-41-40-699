@@ -60,4 +60,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.fizzBuzz(inputNumber);
         assertEquals("Fizz", output);
     }
+
+    @Test
+    public void should_return_Fizz_when_given_number_contains_3_and_times_of_5_or_7_like_30() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 30;
+        String output = fizzBuzz.fizzBuzz(inputNumber);
+        assertEquals("Fizz", output);
+    }
 }

@@ -7,7 +7,7 @@ class FizzBuzz {
     String fizzBuzz(int inputNumber) {
         StringBuilder result = new StringBuilder();
         for (SpecialNumberEnum specialNumberEnum: SpecialNumberEnum.values()) {
-            if (String.valueOf(inputNumber).contains("3")) {
+            if (String.valueOf(inputNumber).contains(String.valueOf(FIZZ.getSpecialNumber()))) {
                 return FIZZ.getTransferString();
             }
             if (isTimesOfGivenNumber(inputNumber, specialNumberEnum.getSpecialNumber())) {
