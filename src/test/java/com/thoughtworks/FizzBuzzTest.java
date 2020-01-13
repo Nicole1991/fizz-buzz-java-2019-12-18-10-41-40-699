@@ -20,4 +20,12 @@ public class FizzBuzzTest {
         String output = fizzBuzz.fizzBuzz(inputNumber);
         assertEquals("2", output);
     }
+
+    @Test
+    public void should_return_buzz_when_given_number_is_times_of_5_like_10() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int inputNumber = 10;
+        String output = fizzBuzz.fizzBuzz(inputNumber);
+        assertEquals("Buzz", output);
+    }
 }
