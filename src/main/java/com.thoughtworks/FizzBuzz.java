@@ -7,13 +7,17 @@ class FizzBuzz {
     private static final String WHIZZ = "Whizz";
 
     public String fizzBuzz(int inputNumber) {
-        if (inputNumber % 3 == 0) {
+        if (isTimesOfGivenNumber(inputNumber, 3)) {
             return FIZZ;
-        } else if (inputNumber % 5 == 0) {
+        } else if (isTimesOfGivenNumber(inputNumber, 5)) {
             return BUZZ;
-        } else if (inputNumber % 7 == 0) {
+        } else if (isTimesOfGivenNumber(inputNumber, 7)) {
             return WHIZZ;
         }
         return String.valueOf(inputNumber);
+    }
+
+    private boolean isTimesOfGivenNumber(int inputNumber, int givenNumber) {
+        return inputNumber % givenNumber == 0;
     }
 }
