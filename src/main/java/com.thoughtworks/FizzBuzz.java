@@ -9,19 +9,9 @@ class FizzBuzz {
     String fizzBuzz(int inputNumber) {
         StringBuilder result = new StringBuilder();
         if (isContainsSpecialNumber(inputNumber, WHIZZ.getSpecialNumber())) {
-            if (isTimesOfGivenNumber(inputNumber, FIZZ.getSpecialNumber())) {
-                result.append(FIZZ.getTransferString());
-            }
-            if (isTimesOfGivenNumber(inputNumber, WHIZZ.getSpecialNumber())) {
-                result.append(WHIZZ.getTransferString());
-            }
+            containsSpecialNumberRule(inputNumber, result, FIZZ);
         } else if (isContainsSpecialNumber(inputNumber, BUZZ.getSpecialNumber())) {
-            if (isTimesOfGivenNumber(inputNumber, BUZZ.getSpecialNumber())) {
-                result.append(BUZZ.getTransferString());
-            }
-            if (isTimesOfGivenNumber(inputNumber, WHIZZ.getSpecialNumber())) {
-                result.append(WHIZZ.getTransferString());
-            }
+            containsSpecialNumberRule(inputNumber, result, BUZZ);
         } else if (isContainsSpecialNumber(inputNumber, FIZZ.getSpecialNumber())) {
             return FIZZ.getTransferString();
         } else {
@@ -32,6 +22,15 @@ class FizzBuzz {
             }
         }
         return result.length() == 0 ? String.valueOf(inputNumber) : result.toString();
+    }
+
+    private void containsSpecialNumberRule(int inputNumber, StringBuilder result, SpecialNumberEnum specialNumber) {
+        if (isTimesOfGivenNumber(inputNumber, specialNumber.getSpecialNumber())) {
+            result.append(specialNumber.getTransferString());
+        }
+        if (isTimesOfGivenNumber(inputNumber, WHIZZ.getSpecialNumber())) {
+            result.append(WHIZZ.getTransferString());
+        }
     }
 
     private boolean isContainsSpecialNumber(int inputNumber, int givenNumber) {
